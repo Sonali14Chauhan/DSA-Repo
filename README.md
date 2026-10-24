@@ -7,6 +7,7 @@ This is my DSA Repo
 |  |
 | ------- |
 | [0347-top-k-frequent-elements](https://github.com/Sonali14Chauhan/DSA-Repo/tree/master/0347-top-k-frequent-elements) |
+| [1480-running-sum-of-1d-array](https://github.com/Sonali14Chauhan/DSA-Repo/tree/master/1480-running-sum-of-1d-array) |
 ## Hash Table
 |  |
 | ------- |
@@ -35,4 +36,8 @@ This is my DSA Repo
 |  |
 | ------- |
 | [0347-top-k-frequent-elements](https://github.com/Sonali14Chauhan/DSA-Repo/tree/master/0347-top-k-frequent-elements) |
+## Prefix Sum
+|  |
+| ------- |
+| [1480-running-sum-of-1d-array](https://github.com/Sonali14Chauhan/DSA-Repo/tree/master/1480-running-sum-of-1d-array) |
 <!---LeetCode Topics End-->
