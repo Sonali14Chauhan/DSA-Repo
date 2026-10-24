@@ -1,0 +1,65 @@
+Remove all occurrences of a character in a string
+
+Given a string s and a character c. The task is to remove all the occurrences of the character in the string.
+
+Examples:
+
+Input: s = "geeksforgeeks", c = 'e'
+Output: s = "gksforgks"
+Input: s = "geeksforgeeks", c = 'g'
+Output: s = "eeksforeeks"
+
+geeksforgeeks
+Search...
+Courses
+Tutorials
+Practice
+Jobs
+
+3
+S
+
+
+
+Refresh
+
+Time (IST)	Status	Marks	Lang	Test Cases	Code
+2026-10-24 20:05:10	Correct	
+2
+java	1111 / 1111	View
+2026-10-24 19:58:15	Time Limit Exceeded	
+0
+java	1110 / 1111	View
+2026-10-24 19:50:45	Compilation Error	
+0
+java	0 / 1111	View
+Java (21)
+
+
+
+}
+
+
+
+
+class Solution {
+    // Function to remove all occurrences of the character from the string
+    public void removeCharacter(StringBuilder s, char c) {
+        // code here
+    
+        String ans =  remove(s, c, s.length(), 0);
+        s.setLength(0);
+        s.append(ans);
+
+    }
+    
+    public String remove(StringBuilder s , char c , int n , int i){
+        if(i==n)  return "";
+        
+        String ans = remove(s, c, n, i+1);
+        
+        if(s.charAt(i) == c) return ans;
+        
+        return s.charAt(i) + ans;
+    }
+}
