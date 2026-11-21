@@ -1,5 +1,7 @@
 
 class Solution {
+    int x[] = {-1, 1, 0, 0};
+    int y[] = {0, 0, -1, 1};
     public int numIslands(char[][] grid) {
         int n = grid.length;
         int m = grid[0].length;
@@ -22,19 +24,19 @@ class Solution {
 
     public void dfs(char[][] grid, int i, int j,
                     boolean[][] vis, int n, int m) {
-
-        // Base conditions
-        if (i < 0 || j < 0 || i >= n || j >= m ||
-            grid[i][j] == '0' || vis[i][j]) {
-            return;
-        }
-
         vis[i][j] = true;
 
-        // Explore all 4 directions
-        dfs(grid, i + 1, j, vis, n, m); // Down
-        dfs(grid, i - 1, j, vis, n, m); // Up
-        dfs(grid, i, j + 1, vis, n, m); // Right
-        dfs(grid, i, j - 1, vis, n, m); // Left
+        for(int k=0; k<4; k++){
+            int row = i + x[k];
+            int col = j + y[k];
+            if(valid(row, col, n, m) && grid[row][col] == '1' && !vis[row][col]){
+                dfs(grid, row, col, vis, n, m);
+            }
+        }
+       
+    }
+
+    boolean valid(int i, int j, int n, int m){
+        return i >= 0 && j >= 0 && i < n && j < m;
     }
 }
